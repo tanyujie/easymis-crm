@@ -1,13 +1,13 @@
-package org.easymis.crm.leads.wap;
+package org.easymis.crm.leads.restapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LeadsWapApplication {
+public class LeadsRestapiApplication {
 	public static void main(String[] args) {
 
-		SpringApplication.run(LeadsWapApplication.class, args);
+		SpringApplication.run(LeadsRestapiApplication.class, args);
 	}
 
 }

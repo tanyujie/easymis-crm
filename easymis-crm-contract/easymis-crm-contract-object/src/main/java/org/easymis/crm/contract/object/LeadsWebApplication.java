@@ -1,4 +1,4 @@
-package org.easymis.crm.leads.web;
+package org.easymis.crm.contract.object;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

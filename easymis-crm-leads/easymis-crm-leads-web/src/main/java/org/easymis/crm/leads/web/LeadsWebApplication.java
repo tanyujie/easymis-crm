@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @SpringBootApplication
 @Controller
 @EnableHystrixDashboard
-public class HystrixApplication {
+public class LeadsWebApplication {
 	@RequestMapping("/")
 	public String home() {
 		return "forward:/hystrix";
 	}
 	public static void main(String[] args) {
 
-		SpringApplication.run(HystrixApplication.class, args);
+		SpringApplication.run(LeadsWebApplication.class, args);
 	}
 
 }

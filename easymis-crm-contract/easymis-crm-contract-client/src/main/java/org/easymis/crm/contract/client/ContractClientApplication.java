@@ -1,14 +1,14 @@
-package org.easymis.crm.contract.web;
+package org.easymis.crm.contract.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class LeadsWebApplication {
+public class ContractClientApplication {
 	public static void main(String[] args) {
 
-		SpringApplication.run(LeadsWebApplication.class, args);
+		SpringApplication.run(ContractClientApplication.class, args);
 	}
 
 }

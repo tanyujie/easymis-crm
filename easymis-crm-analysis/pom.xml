@@ -13,4 +13,5 @@
     <artifactId>easymis-crm-analysis</artifactId>
 
 
+    <packaging>pom</packaging>
 </project>

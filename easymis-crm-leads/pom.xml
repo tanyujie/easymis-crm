@@ -13,4 +13,13 @@
     <artifactId>easymis-crm-leads</artifactId>
 
 
+    <packaging>pom</packaging>
+    <modules>
+    	<module>easymis-crm-leads-client</module>
+    	<module>easymis-crm-leads-domain</module>
+    	<module>easymis-crm-leads-object</module>
+    	<module>easymis-crm-leads-restapi</module>
+    	<module>easymis-crm-leads-wap</module>
+    	<module>easymis-crm-leads-web</module>
+    </modules>
 </project>

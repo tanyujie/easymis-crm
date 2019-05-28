@@ -5,87 +5,76 @@ import java.util.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class LeadsQo extends PageQo implements java.io.Serializable {
-	private String memberId;
-    private String orgId;
-    private String memberName;
-    private String name;
-    private String password;
-	private Integer sex;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String leadsId;
+	private String leadsNo;
+	private String leadsName;
+	private String orgId;
+	private String orgName;
+	private Integer filialeOrgId;
 	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	private Date created;
+	private Date createTime;
 
 	public LeadsQo() {
 	}
 
-
-
-	public String getMemberId() {
-		return memberId;
+	public String getLeadsId() {
+		return leadsId;
 	}
 
-
-
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
+	public void setLeadsId(String leadsId) {
+		this.leadsId = leadsId;
 	}
 
-
-
-	public String getName() {
-		return name;
+	public String getLeadsNo() {
+		return leadsNo;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setLeadsNo(String leadsNo) {
+		this.leadsNo = leadsNo;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getLeadsName() {
+		return leadsName;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setLeadsName(String leadsName) {
+		this.leadsName = leadsName;
 	}
-
 
 	public String getOrgId() {
 		return orgId;
 	}
 
-
-
 	public void setOrgId(String orgId) {
 		this.orgId = orgId;
 	}
 
-
-
-	public String getMemberName() {
-		return memberName;
+	public String getOrgName() {
+		return orgName;
 	}
 
-
-
-	public void setMemberName(String memberName) {
-		this.memberName = memberName;
+	public void setOrgName(String orgName) {
+		this.orgName = orgName;
 	}
 
-
-
-	public Integer getSex() {
-		return sex;
+	public Integer getFilialeOrgId() {
+		return filialeOrgId;
 	}
 
-	public void setSex(Integer sex) {
-		this.sex = sex;
+	public void setFilialeOrgId(Integer filialeOrgId) {
+		this.filialeOrgId = filialeOrgId;
 	}
 
-	public Date getCreated() {
-		return created;
+	public Date getCreateTime() {
+		return createTime;
 	}
 
-	public void setCreated(Date created) {
-		this.created = created;
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 
 }

@@ -14,6 +14,8 @@ public class LeadsRestService {
 
 	@HystrixCommand(fallbackMethod = "findByIdFallback")
 	public String findById(String id) {
+		String temp=leadsClient.findById(id);
+		System.out.println(id+":"+temp);
 		return leadsClient.findById(id);
 	}
 	private String findByIdFallback(String id){

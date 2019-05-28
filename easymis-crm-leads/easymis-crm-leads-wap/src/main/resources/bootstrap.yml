@@ -1,0 +1,19 @@
+server:
+  port: 50803
+spring:
+  application:
+    name: easymis-crm-leads-web
+  profiles:
+    active: development
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+  rabbitmq:
+        addresses: amqp://localhost:5672
+        username: alan
+        password: alan
+
+encrypt:
+  failOnError: false
+

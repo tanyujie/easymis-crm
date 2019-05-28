@@ -7,11 +7,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class LeadsFuture {
-    @Autowired
-    private LeadsRestService leadsRestService;
-    public CompletableFuture<String> findById(String id) {
-        return CompletableFuture.supplyAsync(() -> {
-            return leadsRestService.findById(id);
-        });
-    }
+	@Autowired
+	private LeadsRestService leadsRestService;
+
+	public CompletableFuture<String> findById(String id) {
+		return CompletableFuture.supplyAsync(() -> {
+			return leadsRestService.findById(id);
+		});
+	}
 }

@@ -1,4 +1,4 @@
-package org.easymis.crm.leads.web.config;
+/*package org.easymis.crm.leads.web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,3 +33,4 @@ public class Swagger2 {
 	                .build();
 	    }
 }
+*/

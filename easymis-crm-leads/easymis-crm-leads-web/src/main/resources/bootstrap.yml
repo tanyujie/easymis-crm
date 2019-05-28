@@ -17,3 +17,8 @@ spring:
 encrypt:
   failOnError: false
 
+org:
+  easymis:
+    leads:
+      name: test
+      title: test

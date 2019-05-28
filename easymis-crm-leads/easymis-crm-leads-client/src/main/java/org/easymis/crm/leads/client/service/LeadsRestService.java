@@ -1,6 +1,9 @@
 package org.easymis.crm.leads.client.service;
 
 
+import java.util.ArrayList;
+
+import org.easymis.crm.leads.object.LeadsQo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +17,19 @@ public class LeadsRestService {
 
 	@HystrixCommand(fallbackMethod = "findByIdFallback")
 	public String findById(String id) {
-		String temp=leadsClient.findById(id);
-		System.out.println(id+":"+temp);
+		String temp = leadsClient.findById(id);
+		System.out.println(id + ":" + temp);
 		return leadsClient.findById(id);
 	}
-	private String findByIdFallback(String id){
+
+	public void remove(String id) {
+	}
+
+	public ArrayList<LeadsQo> find() {
+		return null;
+	}
+
+	private String findByIdFallback(String id) {
 		return null;
 	}
 }

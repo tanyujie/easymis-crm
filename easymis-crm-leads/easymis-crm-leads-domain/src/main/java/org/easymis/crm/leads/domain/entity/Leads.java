@@ -9,61 +9,38 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "easymis_member")
-public class Leads  implements java.io.Serializable{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String memberId;
-    @Column(name = "org_id")
-    private String orgId;
-    @Column(name = "member_name")
-    private String memberName;
-    private String name;
-    private String password;
-    
-    public Leads() {
-    }
+@Table(name = "crm_leads")
+public class Leads implements java.io.Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private String leadsId;
+	@Column(name = "leads_no")
+	private String leadsNo;
+	@Column(name = "leads_name")
+	private String leadsName;
 
-	public String getMemberId() {
-		return memberId;
+	public String getLeadsId() {
+		return leadsId;
 	}
 
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
+	public void setLeadsId(String leadsId) {
+		this.leadsId = leadsId;
 	}
 
-	public String getOrgId() {
-		return orgId;
+	public String getLeadsNo() {
+		return leadsNo;
 	}
 
-	public void setOrgId(String orgId) {
-		this.orgId = orgId;
+	public void setLeadsNo(String leadsNo) {
+		this.leadsNo = leadsNo;
 	}
 
-	public String getMemberName() {
-		return memberName;
+	public String getLeadsName() {
+		return leadsName;
 	}
 
-	public void setMemberName(String memberName) {
-		this.memberName = memberName;
+	public void setLeadsName(String leadsName) {
+		this.leadsName = leadsName;
 	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-
 
 }

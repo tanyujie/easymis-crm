@@ -18,7 +18,7 @@ public class LeadsController {
 
     @RequestMapping("/{id}")
     public CompletableFuture<String> findById(@PathVariable String id) {
-        return CompletableFuture.supplyAsync(() -> leadsService.findOne(id))
+        return CompletableFuture.supplyAsync(() -> leadsService.findById(id))
                 .thenApply(user ->{
                     return new Gson().toJson(user);
                 });

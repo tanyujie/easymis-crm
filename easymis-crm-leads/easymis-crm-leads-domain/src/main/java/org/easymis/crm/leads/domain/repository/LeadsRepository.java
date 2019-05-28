@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LeadsRepository extends JpaRepository<Leads, String>, JpaSpecificationExecutor<Leads> {
 
-    @Query("select distinct u from EasyMisMember u where u.id= :id")
-    Optional<Leads> findById(@Param("id") String id);
+    @Query("select distinct u from Leads u where u.leadsId= :leadsId")
+    Optional<Leads> findById(@Param("leadsId") String leadsId);
 
 }

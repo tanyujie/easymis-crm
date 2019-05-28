@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.easymis.crm.leads.domain.config.CacheComponent;
 import org.easymis.crm.leads.domain.entity.Leads;
+import org.easymis.crm.leads.domain.mapper.LeadsMapper;
 import org.easymis.crm.leads.domain.repository.LeadsRepository;
 import org.easymis.crm.leads.domain.util.CommonUtils;
 import org.easymis.crm.leads.domain.util.Constant;
@@ -17,16 +18,18 @@ public class LeadsService {
     @Autowired
     private LeadsRepository leadsRepository;
     @Autowired
+    private LeadsMapper leadsMapper;
+    @Autowired
     private CacheComponent cacheComponent;
     public  Leads findOne(String id){
     	Leads user = null;
         //使用缓存
-        Object object = cacheComponent.get(Constant.MERCHANT_CENTER_USER_ID, id.toString());
+        Object object = cacheComponent.get(Constant.CRM_LEADS_ID, id.toString());
         if (CommonUtils.isNull(object)) {
         	Optional<Leads> member = leadsRepository.findById(id);
             if (member.isPresent()) {
             	user=member.get();
-                cacheComponent.put(Constant.MERCHANT_CENTER_USER_ID, id.toString(), user, 12);            	
+                cacheComponent.put(Constant.CRM_LEADS_ID, id.toString(), user, 12);            	
             }
 
         } else {
@@ -34,4 +37,20 @@ public class LeadsService {
         }
         return  user;
     }
+
+	public Leads findById(String id) {
+		Leads leads = null;
+		// 使用缓存
+		Object object = cacheComponent.get(Constant.CRM_LEADS_ID, id.toString());
+		if (CommonUtils.isNull(object)) {
+			leads = leadsMapper.findById(id);
+			if (leads != null) {
+				cacheComponent.put(Constant.CRM_LEADS_ID, id.toString(), leads, 12);
+			}
+
+		} else {
+			leads = (Leads) object;
+		}
+		return leads;
+	}
 }

@@ -1,6 +1,5 @@
 package org.easymis.crm.leads.domain.entity;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,6 +17,8 @@ public class Leads implements java.io.Serializable {
 	private String leadsNo;
 	@Column(name = "leads_name")
 	private String leadsName;
+	@Column(name = "org_id")
+	private String orgId;
 
 	public String getLeadsId() {
 		return leadsId;
@@ -41,6 +42,14 @@ public class Leads implements java.io.Serializable {
 
 	public void setLeadsName(String leadsName) {
 		this.leadsName = leadsName;
+	}
+
+	public String getOrgId() {
+		return orgId;
+	}
+
+	public void setOrgId(String orgId) {
+		this.orgId = orgId;
 	}
 
 }

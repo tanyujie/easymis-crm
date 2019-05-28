@@ -1,5 +1,6 @@
 package org.easymis.crm.leads.domain.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.easymis.crm.leads.domain.config.CacheComponent;
@@ -11,6 +12,9 @@ import org.easymis.crm.leads.domain.util.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 
 @Service
 @Transactional
@@ -53,4 +57,14 @@ public class LeadsService {
 		}
 		return leads;
 	}
+
+	public PageInfo findAll(int pageNum, int pageSize) {
+		PageHelper.startPage(pageNum, pageSize);
+		List<Leads> leadsList = leadsMapper.findAll();
+		PageInfo<Leads> pageInfo = new PageInfo<Leads>(leadsList);
+		return pageInfo;
+	}
+    public List<Leads> findAll() {
+        return leadsMapper.findAll();
+    }
 }

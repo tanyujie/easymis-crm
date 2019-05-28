@@ -10,6 +10,12 @@ mybatis:
   configuration:
     #开启驼峰命名转换
     map-underscore-to-camel-case: true
+#配置pagehelper
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
 spring:
   zipkin:
     base-url: http://192.168.230.1:9987/

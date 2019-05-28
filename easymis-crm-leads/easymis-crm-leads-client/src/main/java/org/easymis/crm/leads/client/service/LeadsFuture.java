@@ -15,4 +15,9 @@ public class LeadsFuture {
 			return leadsRestService.findById(id);
 		});
 	}
+	public CompletableFuture<String> findByPage(Integer page,Integer size) {
+		return CompletableFuture.supplyAsync(() -> {
+			return leadsRestService.findByPage(page, size);
+		});
+	}
 }

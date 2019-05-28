@@ -2,6 +2,7 @@ package org.easymis.crm.leads.restapi.controller;
 
 import java.util.concurrent.CompletableFuture;
 
+import org.easymis.crm.leads.domain.service.LeadsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

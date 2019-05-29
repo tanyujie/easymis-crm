@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import javax.naming.AuthenticationException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -16,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -89,6 +91,49 @@ public class LoginController extends BaseController{
         }
 		return json;
     }
+	@ApiOperation(value="系统登录", notes="用户名/密码/验证码")
+	//@SysLog("系統登录检查")
+	@RequestMapping(value = "/login.json", method = { RequestMethod.GET, RequestMethod.POST },produces = "application/json;charset=UTF-8")
+	@CrossOrigin(origins = "*")//解决跨域问题的标签
+	@ResponseBody
+	public R loginJson(HttpServletRequest request) throws AuthenticationException {
+		
+	}
+    @ApiOperation(value="系統注銷", notes="")
+	//@SysLog("系統注銷")
+	@CrossOrigin(origins = "*")//解决跨域问题的标签
+	@ResponseBody
+	@RequestMapping(value="/logout.json")
+	public R logoutJson(){
+    	
+    }
+	@ApiOperation(value="系统登录", notes="用户登录状态")
+	@RequestMapping(value = "/loginStatus.json", method = { RequestMethod.GET, RequestMethod.POST },produces = "application/json;charset=UTF-8")
+	@CrossOrigin(origins = "*")//解决跨域问题的标签
+	@ResponseBody
+	public R loginStatusJson(HttpServletRequest request) throws AuthenticationException {
+		
+	}
+    @ApiOperation(value="发送手机登录验证码", notes="发送手机登录验证码")
+	@RequestMapping(value = "/login/mobile/captcha.json", method = { RequestMethod.GET, RequestMethod.POST },produces = "application/json;charset=UTF-8")
+	@CrossOrigin(origins = "*")//解决跨域问题的标签
+	@ResponseBody
+	public R sendLoginMobileCaptchaJson(String mobile, HttpServletRequest request) throws AuthenticationException {
+    	
+    }
+	@ApiOperation(value="发送手机注册验证码", notes="发送手机注册验证码")
+	@RequestMapping(value = "/register/mobile/captcha.json", method = { RequestMethod.GET, RequestMethod.POST },produces = "application/json;charset=UTF-8")
+	@CrossOrigin(origins = "*")//解决跨域问题的标签
+	@ResponseBody
+	public R sendRegisterMobileCaptchaJson(String mobile, HttpServletRequest request) throws AuthenticationException {
+/*		Subject sub = SecurityUtils.getSubject();
+		Session session = request.getSession();
+		if (mobile != null && !"".equals(mobile))
+			return new R().put("captcha", "1234");
+		else
+			return new R().error("手机号错误");*/
+
+	}
 	/**
 	 * 获取登录用户的IP
 	 * 

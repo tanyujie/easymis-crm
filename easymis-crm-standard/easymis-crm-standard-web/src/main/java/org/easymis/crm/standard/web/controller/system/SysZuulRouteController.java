@@ -1,4 +1,4 @@
-package org.easymis.crm.standard.web.controller;
+package org.easymis.crm.standard.web.controller.system;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

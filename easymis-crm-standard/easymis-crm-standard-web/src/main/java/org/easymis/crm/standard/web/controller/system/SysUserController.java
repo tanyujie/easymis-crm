@@ -1,4 +1,4 @@
-package org.easymis.crm.standard.web.controller;
+package org.easymis.crm.standard.web.controller.system;
 
 import java.util.List;
 

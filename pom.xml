@@ -12,6 +12,7 @@
 		<module>easymis-crm-customer</module>
 		<module>easymis-crm-business</module>
 		<module>easymis-crm-project</module>
+		<module>easymis-crm-standard</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

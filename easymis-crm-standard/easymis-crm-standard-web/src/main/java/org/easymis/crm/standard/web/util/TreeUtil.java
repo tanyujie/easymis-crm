@@ -1,4 +1,4 @@
-package org.easymis.crm.standard.web.util;
+/*package org.easymis.crm.standard.web.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,13 +6,13 @@ import java.util.List;
 import org.springframework.beans.BeanUtils;
 
 public class TreeUtil {
-	/**
+	*//**
 	 * 数组转树形结构
 	 * 
 	 * @param sysResources
 	 * @param root
 	 * @return
-	 */
+	 *//*
 	public static List<SysResourceTree> list2Tree(List<SysResource> sysResources, Integer root) {
 		// 普通对象转树节点
 		List<SysResourceTree> resourceList = buildTree(sysResources);
@@ -34,12 +34,12 @@ public class TreeUtil {
 		return trees;
 	}
 
-	/**
+	*//**
 	 * 对象转树节点
 	 * 
 	 * @param sysResources
 	 * @return
-	 */
+	 *//*
 	public static List<SysResourceTree> buildTree(List<SysResource> sysResources) {
 		List<SysResourceTree> trees = new ArrayList<>();
 		sysResources.forEach(resource -> {
@@ -50,3 +50,4 @@ public class TreeUtil {
 		return trees;
 	}
 }
+*/

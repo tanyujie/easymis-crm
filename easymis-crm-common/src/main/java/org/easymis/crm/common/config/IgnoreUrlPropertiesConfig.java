@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import lombok.Data;
 
 @Data
-@RefreshScope
+/*@RefreshScope*/
 @ConfigurationProperties(prefix = "ignore")
 @Component
 public class IgnoreUrlPropertiesConfig {

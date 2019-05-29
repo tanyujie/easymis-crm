@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>easymis-crm</artifactId>
-        <groupId>org.easymis.crm</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>easymis-crm</artifactId>
+		<groupId>org.easymis.crm</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.easymis.crm</groupId>
-    <artifactId>easymis-crm-standard</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>easymis-crm-standard-client</module>
-        <module>easymis-crm-standard-web</module>
-        <module>easymis-crm-standard-wap</module>
-        <module>easymis-crm-standard-object</module>
-        <module>easymis-crm-standard-domain</module>
-        <module>easymis-crm-standard-restapi</module>
-    </modules>
-
-
+	<groupId>org.easymis.crm</groupId>
+	<artifactId>easymis-crm-standard</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>easymis-crm-standard-client</module>
+		<module>easymis-crm-standard-web</module>
+		<module>easymis-crm-standard-wap</module>
+		<module>easymis-crm-standard-object</module>
+		<module>easymis-crm-standard-domain</module>
+		<module>easymis-crm-standard-restapi</module>
+		<module>easymis-crm-standard-message</module>
+	</modules>
+	<dependencies>
+		<dependency>
+			<artifactId>easymis-crm</artifactId>
+			<groupId>org.easymis.crm</groupId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+	</dependencies>
 </project>

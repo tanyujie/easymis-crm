@@ -12,20 +12,15 @@
 	<artifactId>easymis-crm-standard</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>easymis-crm-standard-client</module>
+ 		<module>easymis-crm-standard-client</module>
 		<module>easymis-crm-standard-web</module>
 		<module>easymis-crm-standard-wap</module>
-		<module>easymis-crm-standard-object</module>
+ 		<module>easymis-crm-standard-object</module>
 		<module>easymis-crm-standard-domain</module>
 		<module>easymis-crm-standard-restapi</module>
 		<module>easymis-crm-standard-message</module>
 	</modules>
 	<dependencies>
-		<dependency>
-			<artifactId>easymis-crm</artifactId>
-			<groupId>org.easymis.crm</groupId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

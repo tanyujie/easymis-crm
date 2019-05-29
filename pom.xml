@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>pom</packaging>
 	<modules>
-		<module>easymis-crm-core</module>
+		<module>easymis-crm-common</module>
 		<module>easymis-crm-leads</module>
 		<module>easymis-crm-kpi</module>
 		<module>easymis-crm-contract</module>

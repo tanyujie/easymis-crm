@@ -6,15 +6,13 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.scheduling.annotation.EnableAsync;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableHystrix
-@EnableFeignClients(basePackages = "org.easymis.crm.leads")
-@ComponentScan(basePackages = "org.easymis.crm.leads")
+@EnableFeignClients(basePackages = "org.easymis.crm.standard")
+@ComponentScan(basePackages = "org.easymis.crm.standard")
 /*@EnableAsync
 @EnableScheduling*/
 public class LeadsWebApplication {

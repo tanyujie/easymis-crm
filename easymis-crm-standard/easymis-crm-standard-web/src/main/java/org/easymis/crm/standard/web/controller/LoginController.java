@@ -12,7 +12,7 @@ import org.easymis.crm.standard.client.HrmStaffInfoService;
 import org.easymis.crm.standard.client.MemberService;
 import org.easymis.crm.standard.object.HrmStaffInfoQo;
 import org.easymis.crm.standard.object.MemberQo;
-import org.json.JSONObject;
+import org.easymis.crm.standard.web.util.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -55,9 +55,9 @@ public class LoginController extends BaseController{
     @ApiImplicitParams({ @ApiImplicitParam(name = "username",value = "帐号",dataType = "java.lang.String",required = true), @ApiImplicitParam(name = "password",value = "密码",dataType = "java.lang.String",required = true) })
     @ResponseBody
     @RequestMapping(value = "/login.json",method = { RequestMethod.GET, RequestMethod.POST })
-    public JSONObject login(HttpServletRequest httpServletRequest,ModelMap map) throws Exception{
+    public R login(HttpServletRequest httpServletRequest,ModelMap map) throws Exception{
         // 首先检测验证码
-		JSONObject json = new JSONObject();
+		R json = new R();
         String username = getStringParamDefaultBlank(httpServletRequest, "username");
         String password = getStringParamDefaultBlank(httpServletRequest, "password");
         if(true) {
@@ -97,7 +97,7 @@ public class LoginController extends BaseController{
 	@CrossOrigin(origins = "*")//解决跨域问题的标签
 	@ResponseBody
 	public R loginJson(HttpServletRequest request) throws AuthenticationException {
-		
+		return new R();
 	}
     @ApiOperation(value="系統注銷", notes="")
 	//@SysLog("系統注銷")
@@ -105,33 +105,32 @@ public class LoginController extends BaseController{
 	@ResponseBody
 	@RequestMapping(value="/logout.json")
 	public R logoutJson(){
-    	
+    	return new R();
     }
 	@ApiOperation(value="系统登录", notes="用户登录状态")
 	@RequestMapping(value = "/loginStatus.json", method = { RequestMethod.GET, RequestMethod.POST },produces = "application/json;charset=UTF-8")
 	@CrossOrigin(origins = "*")//解决跨域问题的标签
 	@ResponseBody
 	public R loginStatusJson(HttpServletRequest request) throws AuthenticationException {
-		
+		return new R();
 	}
     @ApiOperation(value="发送手机登录验证码", notes="发送手机登录验证码")
 	@RequestMapping(value = "/login/mobile/captcha.json", method = { RequestMethod.GET, RequestMethod.POST },produces = "application/json;charset=UTF-8")
 	@CrossOrigin(origins = "*")//解决跨域问题的标签
 	@ResponseBody
 	public R sendLoginMobileCaptchaJson(String mobile, HttpServletRequest request) throws AuthenticationException {
-    	
+    	return new R();
     }
 	@ApiOperation(value="发送手机注册验证码", notes="发送手机注册验证码")
 	@RequestMapping(value = "/register/mobile/captcha.json", method = { RequestMethod.GET, RequestMethod.POST },produces = "application/json;charset=UTF-8")
 	@CrossOrigin(origins = "*")//解决跨域问题的标签
 	@ResponseBody
 	public R sendRegisterMobileCaptchaJson(String mobile, HttpServletRequest request) throws AuthenticationException {
-/*		Subject sub = SecurityUtils.getSubject();
-		Session session = request.getSession();
+		HttpSession session = request.getSession();
 		if (mobile != null && !"".equals(mobile))
 			return new R().put("captcha", "1234");
 		else
-			return new R().error("手机号错误");*/
+			return new R().error("手机号错误");
 
 	}
 	/**

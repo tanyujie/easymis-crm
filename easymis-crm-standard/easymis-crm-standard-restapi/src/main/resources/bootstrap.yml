@@ -1,0 +1,16 @@
+server:
+  port: 50101 
+spring:
+  application:
+    name: easymis-crm-standard-restapi
+#  profiles:
+#    active: development
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+
+#  rabbitmq:
+#        addresses: amqp://localhost:5672
+#        username: alan
+#        password: alan
+

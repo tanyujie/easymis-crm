@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient("easymis-crm-standard-restapi")
+@FeignClient("EASYMIS-CRM-STANDARD-RESTAPI")
 public interface SysDictClient {
-	@RequestMapping(method = RequestMethod.GET, value = "/crm/sys/dict/{id}")
+	@RequestMapping(method = RequestMethod.GET, value = "/crm/standard/sys/dict/{id}")
 	String findById(@RequestParam("dictId") String dictId);
 
-	@RequestMapping(method = RequestMethod.GET, value = "/crm/sys/dict/findByPage")
+	@RequestMapping(method = RequestMethod.GET, value = "/crm/standard/sys/dict/findByPage")
 	String findByPage(@RequestParam("pageNum") Integer pageNum, @RequestParam("pageSize") Integer pageSize);
 }

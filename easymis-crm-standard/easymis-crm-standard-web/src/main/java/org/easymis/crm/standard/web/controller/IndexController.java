@@ -25,4 +25,14 @@ public class IndexController {
 		httpSession.getAttribute("userLogin");
 		return "main";
 	}
+	@RequestMapping("/customer.html")
+	public String customer(HttpSession httpSession) {
+		httpSession.getAttribute("userLogin");
+		return "customer/index";
+	}
+	@RequestMapping("/business.html")
+	public String business(HttpSession httpSession) {
+		httpSession.getAttribute("userLogin");
+		return "business/index";
+	}
 }
